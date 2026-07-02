@@ -39,8 +39,8 @@ export function parseBpmnGraph(graph: FlowGraph): ExecutableModel {
       id: edge.id,
       sourceNodeId: edge.source.cell,
       targetNodeId: edge.target.cell,
-      conditionExpression: edge.data.conditionExpression,
-      isDefault: edge.data.isDefault ?? false,
+      conditionExpression: edge.data?.conditionExpression,
+      isDefault: edge.data?.isDefault ?? false,
     })
   }
 
